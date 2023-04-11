@@ -1,0 +1,10 @@
+<%- include("header"); -%>
+ <h1>Home</h1>
+ <p><%=Title%></p>
+    <%Paragraph.forEach(function(post){%>
+      <h1><%=post.title%></h1>
+      <p><%=post.paragraph.substring(0, 100) + " ..."%>
+        <a href="post/<%=post._id%>">read more</a></p>
+      
+    <%})%>
+<%- include("footer"); -%>
